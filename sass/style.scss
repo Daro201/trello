@@ -1,0 +1,122 @@
+body {
+  font-family: 'Pacifico', cursive;
+  margin: 0 auto;
+  padding: 0;
+  color: black;
+  background-image: url("https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.board {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+
+  h1 {
+    text-align: center;
+    color: #a79990;
+    padding: 20px 0;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0;
+    background-color: black;
+    opacity: 0.4;
+  }
+  .create-column {
+    margin: 5px;
+    background-color: gray;
+    border: none;
+    width: 120px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    border-radius: 12px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .create-column:hover, 
+  .add-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px 2px black;
+  }
+  .column-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+    margin-top: 40px;
+
+    .column {
+      background-color: white;
+      color: black;
+      min-width: 200px;
+      min-height: 200px;
+      max-width: 400px;
+      margin: 10px;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+
+      .closing-column {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background-color: #5F021F;
+        color: white;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .closing-card {
+        top: -1px;
+        right: -1px;
+        position: absolute;
+        background-color: gray;
+        color: white;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .add-card {
+        margin: 10px;
+        background-color: gray;
+        border: none;
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        color: white;
+        border-radius: 12px;
+        font-family: 'Oswald', sans-serif;
+      }
+      h2 {
+        padding: 10px 20px;
+        color: white;
+        font-size: 20px;
+        background-color: #5F021F;
+        margin: 0;
+      }
+      .column-card-list {
+        padding: 0;
+        text-align: center;
+        list-style: none;
+        flex-wrap: wrap;
+
+        .card {
+          background-color: white;
+          min-width: 240px;
+          min-height: 50px;
+          border: 2px solid gray;
+          margin: 20px;
+          position: relative;
+          overflow: hidden;
+          white-space: normal;
+        }
+      }
+
+    }
+  }
+
+}
