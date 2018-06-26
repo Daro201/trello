@@ -80,6 +80,10 @@ body {
         font-size: 15px;
         font-weight: bold;
       }
+      .closing-column:hover, 
+      .closing-card:hover {
+        cursor: pointer;
+      }
       .add-card {
         margin: 10px;
         background-color: gray;
