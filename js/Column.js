@@ -9,20 +9,20 @@ var myHeaders = {
 function Column(id, name) {
   	var self = this;
 
-  	this.id = id;
-  	this.name = name || 'Not close';
-  	this.element = generateTemplate('column-template', { name: this.name, id: this.id });
+  this.id = id;
+  this.name = name || 'Not close';
+  this.element = generateTemplate('column-template', { name: this.name, id: this.id });
 
-  	this.element.querySelector('.column').addEventListener('click', function (event) {
-	    if (event.target.classList.contains('btn-delete')) {
-	      	self.removeColumn();
-	    }
+  this.element.querySelector('.column').addEventListener('click', function (event) {
+    if (event.target.classList.contains('btn-delete')) {
+      self.removeColumn();
+    }
 	
-	  	if (event.target.classList.contains('add-card')) {
-  			var cardName = prompt("Enter the name of the card");
+	  if (event.target.classList.contains('add-card')) {
+  		var cardName = prompt("Enter the name of the card");
  			event.preventDefault();
 
-  			var data = new FormData();
+  		var data = new FormData();
 			data.append('name', cardName);
 			data.append('bootcamp_kanban_column_id', self.id);
 
@@ -37,9 +37,7 @@ function Column(id, name) {
   			.then(function(resp) {
     			var card = new Card(resp.id, cardName);
     			self.addCard(card);
- 	 		});
-
-  			/*self.addCard(new Card(cardName));*/
+        });
 		}
 	});
 }
